@@ -46,11 +46,11 @@ export default function AdminProviders() {
           <h1>{providers.length}</h1>
         </div>
 
-        {/* PROVIDER GRID */}
+        {/* PROVIDER CARDS (FLEX WRAP 3 PER ROW) */}
         <div
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+            display: 'flex',
+            flexWrap: 'wrap',
             gap: '20px'
           }}
         >
@@ -58,10 +58,22 @@ export default function AdminProviders() {
             <div
               key={user._id}
               className="dashboard-card"
-              style={{ cursor: 'pointer' }}
+              style={{
+                flex: '1 1 calc(33.333% - 20px)',
+                minWidth: '280px',
+                cursor: 'pointer',
+                borderRadius: '16px',
+                transition: '0.3s'
+              }}
             >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-
+              {/* TOP SECTION */}
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '15px'
+                }}
+              >
                 {/* Avatar */}
                 <div
                   style={{
@@ -91,10 +103,12 @@ export default function AdminProviders() {
 
               <hr style={{ margin: '15px 0', border: '1px solid #eee' }} />
 
+              {/* DATE */}
               <p style={{ margin: 0 }}>
                 📅 Joined: {new Date(user.createdAt).toLocaleDateString()}
               </p>
 
+              {/* STATUS */}
               <span
                 style={{
                   display: 'inline-block',
