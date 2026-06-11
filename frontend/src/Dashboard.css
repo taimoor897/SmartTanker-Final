@@ -911,6 +911,34 @@
 
 
 
+.primary-btn {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.25);
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.35);
+}
+
+.primary-btn:active {
+  transform: translateY(0px);
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.2);
+}
+
+
+
+
+
+
 
 
 
