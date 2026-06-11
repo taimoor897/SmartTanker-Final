@@ -26,12 +26,8 @@ export default function AdminCustomers() {
       {/* HEADER */}
       <header className="dashboard-header">
         <div className="header-left">
-          <h1>
-            SmartTanker Admin
-          </h1>
-          <p className="user-email">
-            Customer Management
-          </p>
+          <h1>SmartTanker Admin</h1>
+          <p className="user-email">Customer Management</p>
         </div>
 
         <div className="header-right">
@@ -94,12 +90,11 @@ export default function AdminCustomers() {
           />
         </div>
 
-        {/* USER CARDS */}
+        {/* USER CARDS (3 PER ROW FLEX WRAP) */}
         <div
           style={{
-            display: 'grid',
-            gridTemplateColumns:
-              'repeat(auto-fill,minmax(300px,1fr))',
+            display: 'flex',
+            flexWrap: 'wrap',
             gap: '20px'
           }}
         >
@@ -108,6 +103,8 @@ export default function AdminCustomers() {
               key={user._id}
               className="dashboard-card"
               style={{
+                flex: '1 1 calc(33.333% - 20px)',
+                minWidth: '280px',
                 borderRadius: '16px',
                 transition: '0.3s',
                 cursor: 'pointer'
@@ -120,13 +117,13 @@ export default function AdminCustomers() {
                   gap: '15px'
                 }}
               >
+                {/* Avatar */}
                 <div
                   style={{
                     width: '60px',
                     height: '60px',
                     borderRadius: '50%',
-                    background:
-                      'linear-gradient(135deg,#3b82f6,#06b6d4)',
+                    background: 'linear-gradient(135deg,#3b82f6,#06b6d4)',
                     color: 'white',
                     display: 'flex',
                     justifyContent: 'center',
@@ -138,17 +135,10 @@ export default function AdminCustomers() {
                   {user.name?.charAt(0).toUpperCase()}
                 </div>
 
+                {/* Info */}
                 <div>
-                  <h3 style={{ margin: 0 }}>
-                    {user.name}
-                  </h3>
-
-                  <p
-                    style={{
-                      color: '#666',
-                      marginTop: '5px'
-                    }}
-                  >
+                  <h3 style={{ margin: 0 }}>{user.name}</h3>
+                  <p style={{ color: '#666', marginTop: '5px' }}>
                     {user.email}
                   </p>
                 </div>
@@ -163,8 +153,7 @@ export default function AdminCustomers() {
               />
 
               <p>
-                📅 Joined:{' '}
-                {new Date(user.createdAt).toLocaleDateString()}
+                📅 Joined: {new Date(user.createdAt).toLocaleDateString()}
               </p>
 
               <span
