@@ -184,6 +184,7 @@ export default function BookingModule() {
                     Cancel
                   </button>
                   <button
+                     className="primary-btn"
   onClick={() =>
     navigate('/complaint', {
       state: {
