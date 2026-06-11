@@ -1,0 +1,100 @@
+/* Page background */
+.login-page {
+  min-height: 100vh;
+  background: #f0f4f8;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Blue header */
+.login-header {
+  background-color: #007bff;
+  padding: 20px 0;
+}
+
+.login-header h1 {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 900;
+  margin: 20px;
+}
+
+/* Form container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+/* Form box */
+.login-form {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px #a3b1c6;
+  width: 350px;
+  height: 35vh;
+  width: 300px;
+}
+
+/* Form title */
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #007bff;
+  font-weight: bolder;
+}
+
+/* Input fields */
+.login-input {
+  width: 90%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Button */
+.login-button {
+  margin-left: 115px;
+  padding: 10px;
+  margin-top: 25px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+  font-weight: bold;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-5px);
+}
+
+/* Message */
+.login-message {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Moving truck icon */
+.moving-icon {
+  display: inline-block;
+  font-size: 40px;
+  color: white;
+  animation: moveTruck 2s ease-in-out infinite;
+}
+
+@keyframes moveTruck {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(20px); }
+  100% { transform: translateX(0); }
+}
